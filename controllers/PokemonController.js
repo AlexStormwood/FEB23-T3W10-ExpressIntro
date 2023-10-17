@@ -10,6 +10,18 @@ router.get("/", (request, response) => {
 	});
 });
 
+router.get("/bananas", async (request, response) => {
+
+	let result = await fetch("https://pokeapi.co/api/v2/pokemon/25");
+	let data = await result.json();
+
+
+	response.json({
+		message: "bananas!",
+		pokemonName: data.name
+	});
+});
+
 
 // Create out of CRUD 
 router.post("/", (request, response) => {
