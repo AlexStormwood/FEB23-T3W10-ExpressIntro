@@ -22,11 +22,10 @@ const someImportedRouterYay = require('./controllers/PokemonController');
 app.use("/pokemon", someImportedRouterYay);
 
 
+module.exports = {
+	app,
+	HOST,
+	PORT
+}
 
 // Configure the server -- happens all above this line ^^^^^^
-
-// Activate the server -- happens all below this line vvvvvvv
-
-app.listen(PORT, HOST, () => {
-	console.log("Server is running on port: " + PORT);
-});
