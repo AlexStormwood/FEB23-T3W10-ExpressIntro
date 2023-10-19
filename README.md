@@ -22,5 +22,6 @@ Goals:
 
 Kahoot bits:
 - [x] package-lock.json in gitignore 
-- app.post 
-- when is middleware executed 
+- [x] app.post 
+- [x] when is middleware executed 
+- [x] route order and duplicate routes 
