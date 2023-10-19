@@ -6,14 +6,15 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "PORT=3001 node src/index.js",
-    "dev":"PORT=5000 nodemon src/index.js",
-    "someOtherCommand":"nodemon src/index.js"
+    "dev": "PORT=5000 nodemon src/index.js",
+    "someOtherCommand": "nodemon src/index.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.18.2"
+    "express": "^4.18.2",
+    "express-validator": "^7.0.1"
   },
   "devDependencies": {
     "nodemon": "^3.0.1"
