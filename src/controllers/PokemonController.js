@@ -10,6 +10,45 @@ router.get("/", (request, response) => {
 	});
 });
 
+// GET /pokemon/25 
+router.get("/:numberOfLePokemon", async (request, response) => {
+	let pokemonId = request.params.numberOfLePokemon;
+
+	let result = await fetch("https://pokeapi.co/api/v2/pokemon/" + pokemonId);
+	let data = await result.json();
+
+	response.json({
+		name: data.name
+	});
+});
+
+
+// POST /pokemon/
+// Body: {username:"alex", pokemonId:someNumber}
+router.post("/", async (request, response) => {
+	// let pokemonId = request.params.numberOfLePokemon;
+
+	if (request.body.username != "alex"){
+		return response.json({
+			message:"You are not authorised!"
+		});
+	}
+
+	let result = await fetch("https://pokeapi.co/api/v2/pokemon/" + request.body.pokemonId);
+	let data = await result.json();
+
+	response.json({
+		name: data.name,
+		username: request.body.username,
+		pokemonId: request.body.pokemonId  
+
+	});
+});
+
+
+
+
+
 router.get("/bananas", async (request, response) => {
 
 	let result = await fetch("https://pokeapi.co/api/v2/pokemon/25");

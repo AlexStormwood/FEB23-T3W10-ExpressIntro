@@ -7,6 +7,15 @@ const HOST = process.env.HOST || 'localhost';
 const PORT = process.env.PORT || 3000;
 // Ports can only be a integer between 1001 - 65536 
 
+// instance.routes(controllers or middleware)
+// instance.use(middleware)
+// instance.use(router)
+// instance.get(express.json())
+// app.get(bananas.json())
+app.use(bananas.json());
+app.use(bananas.urlencoded({extended: true}));
+
+
 
 // some comment here to trigger nodemon into restarting
 
